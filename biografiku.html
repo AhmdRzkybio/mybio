@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Biografi Saya</title>
+  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+  <header>
+    <button id="darkModeToggle">🌙 Mode Gelap</button>
+
+    <h1>Biografi Saya</h1>
+    <nav>
+      <ul>
+        <li><a href="#profil">Profil</a></li>
+        <li><a href="#keluarga">Keluarga</a></li>
+        <li><a href="#pendidikan">Pendidikan formal dan non formal</a></li>
+        <li><a href="#hobi">Hobi</a></li>
+        <li><a href="#riwayat">Riwayat Pekerjaan</a></li>
+         <li><a href="#kontak">Kontak</a></li> <!-- Tambahan -->
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="profil" class="fade-in">
+      <h2>Profil</h2>
+      <div class="profil-container">
+      <img src="foto formal.png" alt="foto ku" width="200"> <p>Halo! perkenalkan Nama saya <strong>Ahmad Rizki Komariyanto</strong>, saya lahir pada tanggal <strong> 23 Juli 1999</strong> Di kota <strong>Tangerang,</strong></p> </div>
+    </section><br>
+    <section id="keluarga" class="fade-in">
+      <h2>Keluarga</h2>
+      <p>saya berasal dari keluarga sederhana yg serba kekurangan , ayah saya bernama <strong>Komarudin</strong> yang berprofesi sebagai <strong>supir Pribadi</strong> dan ibu saya bernama <strong>Mujiati</strong> yg berprofesi sebagai <strong>Ibu Rumah Tangga</strong>, saya anak ketiga dari tiga bersaurdara,kakak pertama saya bernama <strong>Rahayu muji astuti lahir di tangerang,27 November 1990.</strong> dan kakak kedua saya bernama <strong>Nurul komariyanti lahir di Tangerang,30 april 1995</strong> ,<br>
+      </p>
+    </section>
+    <section id="pendidikan" class="fade-in">
+      <h2>Pendidikan</h2>
+      <ul>
+        <li>SDIT Al Ayaniyah Tangerang </li>
+        <li>SMPN 7 Habiburahman Tangerang</li>
+        <li>SMK Teknologi Indonesia Kota Tangerang</li></ul>
+        <h2>non formal</h2>
+         <ul>
+        <li>Kursus online web development <strong>(HTML&CSS)</strong></li> 
+        <li class="rencana">
+          🎯 <strong>Rencana:</strong> Mengikuti kursus <strong>app developer bersertifikat di Course-Net</strong> selama 6 bulan (target 2025)
+    </li>
+        </li>
+      </ul>
+    </section><br>
+    <section id="hobi" class="fade-in">
+      <h2>Hobi</h2>
+      <ul>
+        <li><strong>Musik:</strong> Saya suka bermain gitar, bass, drum, dan menyanyi. Musik membantu saya mengekspresikan diri, melepas rasa stress dan membuat saya lebih relax dari sebelumnya.</li>
+        <li><strong>Bela Diri:</strong> Saya tertarik pada dunia bela diri karena melatih kedisiplinan dan fisik.</li>
+        <li><strong>Gym:</strong> Saya rutin olahraga di gym untuk menjaga kebugaran tubuh dan membuat saya lebih segar saat pagi hari.</li>
+      </ul>
+    </section><br>
+    <section id="riwayat" class="fade-in">
+      <h2>Riwayat Pekerjaan</h2>
+      <ul>
+        
+       <li>Pt United can - Operator gudang limbah</li>
+        <li>Pt Jet Indonesia (Pt J&T) - Kurir Magang </li>
+        <li>Pt Lex Express (Lazada) - Kurir </li>
+        <li>Pt Indoplat Perkasa Purnama - Operator gudang </li>
+      </ul>
+      <p>
+
+  <strong>Saya percaya bahwa setiap pengalaman adalah batu loncatan untuk tumbuh lebih baik. Ke depannya, saya ingin menggabungkan pengalaman kerja lapangan saya dengan kemampuan teknologi, agar dapat menciptakan solusi digital yang mempermudah pekerjaan sehari-hari — seperti membuat aplikasi yang membantu operasional gudang atau logistik lebih efisien.</strong>
+</p>
+
+    </section>
+    <section id="kontak" class="fade-in">
+  <h2>Kontak</h2>
+  <p>Jika ingin menghubungi saya, silakan melalui:</p>
+  <ul>
+    <li>
+      <i class="fab fa-whatsapp"></i>
+      <strong> WhatsApp:</strong>
+      <a href="https://wa.me/6285771352526" target="_blank">+62 8577-1352-526</a>
+    </li>
+    <li>
+      <i class="fas fa-envelope"></i>
+      <strong> Email:</strong>
+      <a href="mailto:ahmadrizki714@gmail.com">ahmadrizki714@gmail.com</a>
+    </li>
+  </ul>
+</section>
+
+     
+</section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 AHMAD RIZKI KOMARIYANTO. Semua hak dilindungi.</p>
+  </footer>
+  <script>
+  const fadeElements = document.querySelectorAll('.fade-in');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  fadeElements.forEach(el => {
+    observer.observe(el);
+  });
+</script>
+<script>
+  const toggle = document.getElementById("darkModeToggle");
+  const body = document.body;
+
+  // Cek apakah dark mode sudah disimpan sebelumnya
+  if (localStorage.getItem("darkMode") === "true") {
+    body.classList.add("dark");
+    toggle.textContent = "☀️ Mode Terang";
+  }
+
+  toggle.addEventListener("click", () => {
+    body.classList.toggle("dark");
+    const isDark = body.classList.contains("dark");
+    toggle.textContent = isDark ? "☀️ Mode Terang" : "🌙 Mode Gelap";
+    localStorage.setItem("darkMode", isDark); // Simpan preferensi user
+  });
+</script>
+
+</body>
+</html>
